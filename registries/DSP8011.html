@@ -12,9 +12,9 @@
   <div class="preamble">
     <div class="logo"></div>
     <p>Document Identifier: <span class="dsp">DSP8011</span></p>
-    <p>Date: 2018-12-17</p>
-    <p>Version: <span class="version">2018.2</span></p>
-
+    <p>Date: 2019-05-16</p>
+    <p>Version: <span class="version">2019.1</span></p>
+    
   </div>
   <h1 class="title">Redfish Standard Registries</h1>
   <div class="wip">
@@ -23,7 +23,7 @@
     <p><strong>Provide any comments through the DMTF Feedback Portal:</strong> <a href="http://www.dmtf.org/standards/feedback">http://www.dmtf.org/standards/feedback</a></p>
   </div>
   <div class="document">
-
+    
     <p>Document Class: Normative</p>
     <p>Document Status: <span class="status">Published</span></p>
     <p>Document Language: en-US</p>
@@ -31,22 +31,22 @@
   </div>
   <div class="copyright">
     <p>Copyright Notice</p>
-    <p>Copyright &copy; 2015-2018 DMTF. All rights reserved.
+    <p>Copyright &copy; 2015-2019 DMTF. All rights reserved.
   </div>
   <p>DMTF is a not-for-profit association of industry members dedicated to promoting enterprise and systems management and interoperability. Members and non-members may reproduce DMTF specifications and documents, provided that correct attribution is given. As DMTF specifications may be revised from time to time, the particular version and release date should always be noted.</p>
   <p>Implementation of certain elements of this standard or proposed standard may be subject to third party patent rights, including provisional patent rights (herein "patent rights"). DMTF makes no representations to users of the standard as to the existence of such rights, and is not responsible to recognize, disclose, or identify any or all such third party patent right, owners or claimants, nor for any incomplete or inaccurate identification or disclosure of such rights, owners or claimants. DMTF shall have no liability to any party, in any manner or circumstance, under any legal theory whatsoever, for failure to recognize, disclose, or identify any such third party patent rights, or for such party's reliance on the standard or incorporation thereof in its product, protocols or testing procedures. DMTF shall have no liability to any party implementing such standard, whether such implementation is foreseeable or not, nor to any patent owner or claimant, and shall have no liability or responsibility for costs or losses incurred if a standard is withdrawn or modified after publication, and shall be indemnified and held harmless by any party implementing the standard from any and all claims of infringement by a patent owner for such implementations.</p>
   <p>For information about patents held by third-parties which have notified the DMTF that, in their opinion, such patent may relate to or impact implementations of DMTF standards, visit <a href="http://www.dmtf.org/about/policies/disclosures.php">http://www.dmtf.org/about/policies/disclosures.php</a>.</p>
   <p>This document's normative language is English. Translation into other languages is permitted.</p>
 </div>
-<!--<p id="toc-header">CONTENTS</p><-->
+<p id="toc-header">CONTENTS</p>
 <ul id="toc"></ul><style scoped="">.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><h1 id="foreword">Foreword</h1>
 <p>The following files are part of the Redfish Scalable Platforms Management API ("Redfish") development effort:</p>
 <ul>
 <li>DSP0226 - Redfish Specification - This file is the main Redfish Scalable Platforms Management API Specification.</li>
 <li>DSP0270 - Redfish Host Interface Specification - This document specifies the "in-band" or "OS-based" Redfish Host Interface. </li>
-<li>DSP0272 - Redfish Interoperability Profile Specification - Specifies the structure and JSON document used to define and publish an interoperability profile used to check an implementation's conformance to a defined minimum set of functionality.</li>
+<li>DSP0272 - Redfish Interoperability Profile Specification - This file specifies the structure and JSON document used to define and publish an interoperability profile used to check an implementation's conformance to a defined minimum set of functionality.</li>
 <li>DSP2044 - Redfish Whitepaper - This is intended to be a non-normative document helping those new to Redfish understand how to interact with the Redfish Service and understand common functions and tasks.</li>
-<li>DSP2043 - Redfish Mockup - This is a mockup that can be used as sample of output from GETs from a Redfish Service.  Informative in nature, it was used to develop the schema.  A person can set up an NGINX or similar server and configure it to output JSON format and then use this directory for demonstration purposes.</li>
+<li>DSP2043 - Redfish Mockup - This is a mockup that can be used as sample output from GETs from a Redfish Service.  Informative in nature, it was used to develop the schema.  A person can set up an NGINX or similar server and configure it to output JSON format and then use this directory for demonstration purposes.</li>
 <li>DSP8010 - Redfish Schema - This contains the Redfish Schema definitions.  These files are normative in nature and are normatively referenced by the Redfish Specification.  There are three Schema formats - CSDL (OData Common Schema Definition Language format, which is in XML), JSON Schema, and OpenAPI schema.  These Schema definitions should be functionally equivalent, thus specifying the schema in two different languages.</li>
 <li>DSP8011 - Redfish Standard Registries - This contains the Redfish Registry definitions.  This bundle of Redfish registries includes Message registries used for Redfish-defined messages (including events) and Privilege maps.</li>
 <li>DSP8013 - Redfish Interoperability Profiles - A bundle of published Redfish Interoperability Profile documents as well as supporting schema and sample documents used for creating profiles.</li>
@@ -55,13 +55,19 @@
 <table>
 <thead>
 <tr>
-<th>Schema File</th>
+<th>Registry File</th>
 <th>Version</th>
 <th>Date</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Base</td>
+<td>1.5.0</td>
+<td>2019-04-03</td>
+<td>Added 'SubscriptionTerminated' and 'PasswordChangeRequired' messages.</td>
+</tr>
 <tr>
 <td>ResourceEvent</td>
 <td>1.0.1</td>

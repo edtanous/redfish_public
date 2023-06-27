@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!---->
 <!--################################################################################       -->
-<!--# Redfish Schema:  Protocol  v1.0.0-->
+<!--# Redfish Schema:  Protocol-->
 <!--#                                                                                      -->
 <!--# For a detailed change log, see the README file contained in the DSP8010 bundle,      -->
 <!--# available at http://www.dmtf.org/standards/redfish                                   -->
@@ -14,10 +14,15 @@
   <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/csd01/complete/vocabularies/Org.OData.Core.V1.xml">
     <edmx:Include Namespace="Org.OData.Core.V1" Alias="OData"/>
   </edmx:Reference>
+  <edmx:Reference Uri="http://redfish.dmtf.org/schemas/v1/RedfishExtensions_v1.xml">
+    <edmx:Include Namespace="RedfishExtensions.v1_0_0" Alias="Redfish"/>
+  </edmx:Reference>
 
   <edmx:DataServices>
 
     <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="Protocol">
+      <Annotation Term="Redfish.OwningEntity" String="DMTF"/>
+
       <Annotation Term="OData.Description" String="This enum describes all Protocols supported by devices in the Storage and Fabric models."/>
       <EnumType Name="Protocol">
         <Member Name="PCIe">
@@ -111,6 +116,10 @@
         <Member Name="RoCEv2">
           <Annotation Term="OData.Description" String="RDMA over Converged Ethernet Protocol Version 2."/>
           <Annotation Term="OData.LongDescription" String="This value shall mean that this device conforms to the RDMA over Converged Ethernet version 2 protocol as defined by the Infiniband Architecture Specification."/>
+        </Member>
+        <Member Name="OEM">
+          <Annotation Term="OData.Description" String="OEM specific."/>
+          <Annotation Term="OData.LongDescription" String="This value shall mean that this device conforms to an OEM specific architecture and additional information may be included in the OEM section."/>
         </Member>
       </EnumType>
     </Schema>
